@@ -1,0 +1,16 @@
+
+U
+java:S1118
+":Add a private constructor to hide the implicit public one.(ï óäÿÿÿÿÿ
+f
+java:S3457"KFormat specifiers or lambda should be used instead of string concatenation.(‹Šážùÿÿÿÿ
+f
+java:S3457"KFormat specifiers or lambda should be used instead of string concatenation.(‹Šážùÿÿÿÿ
+T
+java:S1854$">Remove this useless assignment to local variable "connection".(ŽÈØ“
+f
+java:S3457'"KFormat specifiers or lambda should be used instead of string concatenation.(‹Šážùÿÿÿÿ
+c
+java:S1192"HDefine a constant instead of duplicating this literal "ERROR: " 3 times.(‹Šážùÿÿÿÿ
+c
+java:S2259""HA "NullPointerException" could be thrown; "connection" is nullable here.(¼Þ»‚ýÿÿÿÿ
