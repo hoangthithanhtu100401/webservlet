@@ -1,11 +1,0 @@
-
-p
-java:S3008"[Rename this field "SELECT_EMPLOYEES" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(злЙz
-{
-java:S3008"`Rename this field "DELETE_EMPLOYEE_BY_TD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ЃаЦуьяяяя
-r
-java:S3008"]Rename this field "GET_EMPLOYEE_BY_ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ЦяИ
-p
-java:S3008"ZRename this field "UPDATE_EMPLOYEE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(В’ХЮ
-p
-java:S3008"ZRename this field "INSERT_EMPLOYEE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(єљйЅ

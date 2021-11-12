@@ -1,29 +1,24 @@
 package com.hivetech.service.implement;
 
 import com.hivetech.model.Employee;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
+import com.hivetech.service.EmployeeService;
 
+import javax.servlet.http.Part;
 import java.io.IOException;
 import java.util.List;
 
-@Service
 public class UploadFileExcelService {
-    @Autowired
-    EmployeeReponsitory repository;
-    public void save(MultipartFile file) {
+    private EmployeeService employeeService = new EmployeeServiceImpl();
+
+    public void uploadEmployee(Part part) {
         try {
-            List<Employee> tutorials = UploadFileExeclHelper.excelEmployees(file.getInputStream());
-            repository.saveAll(tutorials);
+            List<Employee> employees = UploadFileExeclHelper.excelEmployees(part.getInputStream());
+            for (int i = 0; i < employees.size(); i++) {
+                employeeService.add(employees.get(i));
+            }
         } catch (IOException e) {
             throw new RuntimeException("fail to store excel data: " + e.getMessage());
         }
     }
-
-    public List<Employee> getAllTutorials() {
-        return repository.finalAll();
-    }
 }
 
-}

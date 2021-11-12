@@ -18,7 +18,7 @@ import java.util.List;
 public class UploadFileExeclHelper {
     public static String TYPE = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
     public String[] HEADERs = {"employeeId", "employeeAge", "employeeName", "employeeCity"};
-    static String SHEET = "Employees";
+    static String SHEET = "Sheet1";
 
     public static boolean HasExeclFormat(MultipartFile file){
         if(!TYPE.equals(file.getContentType())){
@@ -51,21 +51,15 @@ public class UploadFileExeclHelper {
                 while (cellsInRow.hasNext()){
                     Cell currentCell = cellsInRow.next();
                     switch (cellIdx){
-                        case 0:
-                            employee.setEmployeeId((int) currentCell.getNumericCellValue());
-                            break;
                         case 1:
                             employee.setEmployeeAge(currentCell.getNumericCellValue());
                             break;
-
                         case 2:
                             employee.setEmployeeName(currentCell.getStringCellValue());
                             break;
-
                         case 3:
                             employee.setEmployeeCity(currentCell.getStringCellValue());
                             break;
-
                         default:
                             break;
                     }
